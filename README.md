@@ -30,29 +30,29 @@ For two clients to communicate, they must share the same mask.
     
 - **Switch** : A network switch connects devices within a network and forwards data packets to and from those devices.
 
-![network-switch.svg](assets/network-switch.svg)
+![network-switch.svg](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/network-switch.svg)
 
 ## Net Practice
 
 - **Level 1**
     - Image
         
-        ![Untitled](assets/Untitled.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled.png)
         
     
-    Client A and Client B must communicate with each other. By looking at their masks, we deduce that their IP addresses will start with 104.93.23 followed by a decimal ranging between ]255, 0[.
+    Client A and Client B must communicate with each other. By looking at their masks, we deduce that their IP addresses will start with 104.93.23 followed by a decimal ranging between ]0, 255[.
     
     Same goes for C and D, but the last 16-bits are free.
     
     <aside>
-    💡 In a close connection like this one, having such a wide range of mask is useless. The perfect mask would be 255.255.255.252 (**/30**). The first 30 bits are used for the network prefix and the last 2 are use to identify the host. Since you can't use 00 (network id) nor 11 (broadcast message) you have $2^2 - 2 = 2$ usable addresses.
+    💡 In a close connection like this one, having such a wide range of mask may seem un-optimized. A great mask would be 255.255.255.252 (**/30**). The first 30 bits are used for the network prefix and the last 2 are use to identify the host. Since you can't use 00 (network id) nor 11 (broadcast message) you have $2^2 - 2 = 2$ usable addresses.
     
     </aside>
     
 - **Level 2**
     - Image
         
-        ![Untitled](assets/Untitled%201.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%201.png)
         
     
     The idea is the same : every client should have the same mask to communicate with each other. We the have to choose an IP within the range of the mask.
@@ -66,20 +66,21 @@ For two clients to communicate, they must share the same mask.
 - **Level 3**
     - Image
         
-        ![Untitled](assets/Untitled%202.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%202.png)
         
-        The switch is here to connect multiple devices within a network. In practice, it doesn’t change anything : apply the same mask to all devices and choose an IP within its range.
-        
-        255.255.255.255 = 32-bits
-        
-        255.255.255.128 = 25-bits
-        
-        32-bits - 25-bits = **7-bits** available ranging from ]127, 0[ in decimal.
-        
+    
+    The switch is here to connect multiple devices within a network. In practice, it doesn’t change anything : apply the same mask to all devices and choose an IP within its range.
+    
+    255.255.255.255 = 32-bits
+    
+    255.255.255.128 = 25-bits
+    
+    32-bits - 25-bits = **7-bits** available ranging from ]127, 0[ in decimal.
+    
 - **Level 4**
     - Image
         
-        ![Untitled](assets/Untitled%203.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%203.png)
         
     
     Here, we need to connect two clients to each other and a switch to a router. This may not look like it, but the configuration is exactly the same as Level 3 : we have to connect three devices. Even simpler, we don’t have any required masks !
@@ -98,7 +99,7 @@ For two clients to communicate, they must share the same mask.
 - **Level 5**
     - Image
         
-        ![Untitled](assets/Untitled%204.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%204.png)
         
     
     **Static route** :  A static route is used when a computer wants to reach someone outside of its network (these are the purple boxes with ⇒). If the destination matches the left side, it will ask the right side to forward the message.
@@ -115,7 +116,7 @@ For two clients to communicate, they must share the same mask.
 - **Level 6**
     - Image
         
-        ![Untitled](assets/Untitled%205.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%205.png)
         
     
     The internet must send its packets to Client A. To do so, the internet's destination must match the network address of Client A*.* Refer to level 3 to find Client A IP address.
@@ -128,7 +129,7 @@ For two clients to communicate, they must share the same mask.
 - **Level 7**
     - Image
         
-        ![Untitled](assets/Untitled%206.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%206.png)
         
     
     Here, we have to connect two devices three times. As seen in Level 1, we can use the mask /30 to connect 2 devices.
@@ -148,7 +149,7 @@ For two clients to communicate, they must share the same mask.
 - **Level 8**
     - Image
         
-        ![Untitled](assets/Untitled%207.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%207.png)
         
     
     Internet wants to connect to the **network** (remember in level 1 when we said that XX.XX.XX.0 meant network ?). This helps us get the IP and the masks of Client C and Client D.
@@ -173,7 +174,7 @@ For two clients to communicate, they must share the same mask.
 - **Level 9**
     - Image
         
-        ![Untitled](assets/Untitled%208.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%208.png)
         
     
     Overall, nothing complicated in this level, follow the instructions and it should be fine :
@@ -188,7 +189,7 @@ For two clients to communicate, they must share the same mask.
 - **Level 10**
     - Image
         
-        ![Untitled](assets/Untitled%209.png)
+        ![Untitled](Net%20Practice%20cda5f4e88b054e829c195bab492bfb78/Untitled%209.png)
         
     
     Every interface starts with the same IP address, the goal is then to properly use masks and available IP addresses.
