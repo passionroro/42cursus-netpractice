@@ -40,7 +40,7 @@ For two clients to communicate, they must share the same mask.
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/1.png)
+![img](assets/1.png)
 </details>
 
 Client A and Client B must communicate with each other. By looking at their masks, we deduce that their IP addresses will start with 104.93.23 followed by a decimal ranging between ]0, 255[.
@@ -61,7 +61,7 @@ Same goes for C and D, but the last 16-bits are free.
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/2.png)
+![img](assets/2.png)
 </details>
         
     
@@ -82,7 +82,7 @@ The idea is the same : every client should have the same mask to communicate wit
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/3.png)
+![img](assets/3.png)
 </details>
         
     
@@ -103,7 +103,7 @@ The switch is here to connect multiple devices within a network. In practice, it
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/4.png)
+![img](assets/4.png)
 </details>
         
     
@@ -129,7 +129,7 @@ Interface R2 and R3 are here to confuse you, the don’t interact with the R1 ne
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/5.png)
+![img](assets/5.png)
 </details>
         
     
@@ -153,7 +153,7 @@ In this exercise, the default route should redirect unknown addresses to the rou
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/6.png)
+![img](assets/6.png)
 </details>
         
     
@@ -173,7 +173,7 @@ The internet must send its packets to Client A. To do so, the internet's destina
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/7.png)
+![img](assets/7.png)
 </details>
         
     
@@ -200,7 +200,7 @@ About the static routes, the logic is very similar to Level 5 : if an address is
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/8.png)
+![img](assets/8.png)
 </details>
         
     
@@ -233,7 +233,7 @@ In other words, Client C and Client D IP addresses will each take 4-bits from th
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/9.png)
+![img](assets/9.png)
 </details>
         
     
@@ -255,7 +255,7 @@ If the redirection were done properly, it should work perfectly !
 <details>
 <summary>Image</summary>
 
-![lvl1_img](assets/10.png)
+![img](assets/10.png)
 </details>
         
     
