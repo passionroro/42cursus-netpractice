@@ -16,6 +16,10 @@ For two clients to communicate, they must share the same mask.
     | --- | --- | --- |
     | UMich network | Medicine department | Lab computer |
     
+    The example above is the public IP address. It is the one the router shows to Internet. Private IP addresses allow identification of devices within a network.
+    
+    ![public-ip](assets/public-ip.png)
+    
     ⚠️ When a network is connected to the internet, **it cannot use an IP address from the reserved private IP addresses**. The following ranges are reserved for private IP addresses:
     
     ```
@@ -24,6 +28,14 @@ For two clients to communicate, they must share the same mask.
     10.0.0.0 – 10.255.255.255     (16,777,216 IP addresses)
     ```
     
+    - **TCP/IP Protocol** : The **Transmission Control Protocol (TCP)** is a transport protocol that is used on top of IP to ensure reliable transmission of packets.
+    
+    The first computer sends a packet with the SYN bit set to 1 (SYN = "synchronize?"). The second computer sends back a packet with the ACK bit set to 1 (ACK = "acknowledge!") plus the SYN bit set to 1. The first computer replies back with an ACK.
+    
+    ![tcp-ip-protocol](assets/tcp-ip-protocol.svg)
+    
+    This allows data transmission and will be useful for detecting lost packets and handling out of order packets.
+
 - **Router** : A router is a device that connects two or more packet-switched networks or sub networks.
     
     Unlike a router, a switch only sends data to the single device it is intended for (which may be another switch, a router, or a user's computer), not to networks of multiple devices.
