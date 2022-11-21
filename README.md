@@ -1,6 +1,6 @@
 # Net Practice
 
-[Tale of the Two Tails](https://www.deezer.com/us/track/1946027917)
+🎶 Want some music while reading ? [Tale of the Two Tails](https://www.deezer.com/us/track/1946027917)
 
 ## Rules
 
